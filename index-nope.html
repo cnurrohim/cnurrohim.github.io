@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github Pages</title>
+	<link rel="stylesheet" href="Assets/splide-2.4.21/dist/css/splide.min.css">
+	<script src="Assets/splide-2.4.21/dist/js/splide.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+	@font-face {
+	  font-family: 'OpenSans-Regular';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Regular.ttf')  format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-Bold';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Bold.ttf')  format('truetype');
+	  font-weight: bolder;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-SemiBold';
+	  src: url('Assets/fonts/Open Sans/OpenSans-SemiBold.ttf')  format('truetype');
+	  font-weight: bold;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-Italic';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Italic.ttf')  format('truetype');
+	  font-weight:lighter;
+	  font-style: italic;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-Light';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Light.ttf')  format('truetype');
+	  font-weight:lighter;
+	  font-style: normal;
+	}
+
+
+	@font-face {
+	  font-family: 'Roboto-Regular';
+	  src: url('Assets/fonts/Roboto/Roboto-Regular.ttf')  format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+
+	@font-face {
+	  font-family: 'Roboto-Bold';
+	  src: url('Assets/fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+	  font-weight: bold;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'Roboto-Italic';
+	  src: url('Assets/fonts/Roboto/Roboto-Italic.ttf')  format('truetype');
+	  font-weight:normal;
+	  font-style: italic;
+	}
+
+	@font-face {
+	  font-family: 'Roboto-Light';
+	  src: url('Assets/fonts/Roboto/Roboto-Light.ttf')  format('truetype');
+	  font-weight:lighter;
+	  font-style: normal;
+	}
+	html, body{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		background-color: #eee;
+		height: 100vh;
+		display: flex;
+	}
+	.left-pane,.right-pane{
+		border: 0px solid red;
+		width: 49.7%;
+		display: flex;
+	}
+
+	.left-pane{
+		position: relative;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+	.right-pane{
+		
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+	.profile-pic{
+		width: 25%;
+		height: 100%;
+		border:0px solid #000;
+		position: absolute;
+		right: 30px ;
+		overflow: hidden;
+		background-color: #999;
+	}
+	
+	.splide{
+		border: 0px solid red;
+	}
+	.splide .splide__arrows{
+		
+	}
+	.splide .splide__arrow{
+		top:-40px !important;
+		background-color: unset !important;
+	}
+	.splide .splide__arrow--prev{
+		left: -8px !important;
+	}
+	.splide .splide__arrow--next{
+		left: 12em;
+		right: unset !important;
+	}
+	.splide .splide__pagination{
+		bottom: unset !important;
+		border:0px solid red;
+		width: 90px;
+		height: 20px;
+		top:-50px;
+		left: 5.5em;
+		overflow: hidden;
+
+	}
+	.vsplide .splide__arrow{
+		left: -30px !important;
+	}
+	.vsplide{
+		border: 0px solid red;
+		
+	}
+	.vsplide .splide__arrow--next{
+		bottom: 20px !important;
+	}
+	.vsplide .splide__arrow--prev{
+		top: 90px !important;
+
+	}
+	.vsplide .splide__arrow{
+		background-color: unset !important;
+		
+	}
+	.splide__pagination__page{
+		background: #313131 !important;
+	}
+	.profile-pic img{
+		width: auto;
+		height: 100%;
+		object-fit: scale-down;
+		object-position: -50px 0;
+	}
+	h1,h4{
+		font-family: OpenSans-Bold;
+		font-size: 45px;
+		margin: 0;
+	}
+	.desc{
+		border: 0px solid #000;
+		width: 300px;
+	}
+	p{
+		font-family: Roboto-Regular;
+		line-height: 1.5em;
+	}
+	.profile-desc{
+		border: 0px solid #000;
+		
+		margin-left: 250px;
+		margin-top:-65px;
+		position: relative;
+	}
+	.vsplide .splide__slide{
+		border: 0px solid blue;
+	}
+	h3{
+		font-size: 18px;
+	}
+	h2{
+		font-size: 24px;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="left-pane">
+			<div class="profile-desc">
+			<div class="vsplide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<h3>Hi, Saya Choirul Nurrohim</h3>
+							<img class="profilepic" src="Public/img/profile.jpeg" height="260px"alt="profile picture">
+						</li>
+						<li class="splide__slide">
+							<p>Saya Web Developer tinggal di Sidoarjo-Jawa Timur, Kelahiran 92</p>
+							<h3>Kontak</h3>
+							<p>mcnurrohim@gmail.com</p>
+							<p>0815 5357 1490</p>				
+						</li>
+						<li class="splide__slide">
+							<h2>Riwayat Pendidikan</h3>
+								<hr/>
+							<h3>2010 - 2013</h3>
+							<p>D3 Teknik Komputer - Politeknik SAKTI Surabaya</p>
+							<h3>2016 - 2021</h3>
+							<p>S1 Teknik Informatika - Universitas Bhayangkara Surabaya</p>
+						</li>
+						<li class="splide__slide">
+							<h2>Riwayat Pekerjaan</h3>
+								<hr/>
+							<h3>September 2013 - Februari 2015 </h3>
+							<p>CV. IDE KITA CEMERLANG</p>
+							<h3>September 2015 – November 2015</h3>
+							<p>PT. AXIAPRO INVESTASI INTERNATIONAL</p>
+							<h3>Agustus 2016 – Desember 2017 </h3>
+							<p>PT. SENTRA VIDYA UTAMA</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			<!--div class="profile-pic">
+				<img src="Public/img/pp.jpg" alt="">
+			</div-->
+			<!--div class="desc">
+				<h1>This is title</h1>
+				<p>Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart.</p>
+			</div-->
+		</div>
+		<div class="right-pane">
+			<div class="splide">
+
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<div class=".splide__slide__container">
+								<img src="Public/img/portofolio/app6/1.png" width="100%" />
+							</div>
+							<div class="app-desc">
+								<h3>Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+								<p>
+									Merupakan aplikasi penunjang tugas akhir yang dibuat menggunakan Metode JST-Backpropagation dan library Tensorflow.js, sebagai salah satu syarat dalam memperoleh gelar S1. 
+								</p>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app6/2.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app6/3.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+
+						<li class="splide__slide">
+							<div class=".splide__slide__container">
+								<img src="Public/img/portofolio/app1/1.png" width="100%" />
+							</div>
+							<div class="app-desc">
+								<h3>Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+								<p>
+									Merupakan aplikasi penunjang tugas akhir yang dibuat menggunakan Metode JST-Backpropagation dan library Tensorflow.js, sebagai salah satu syarat dalam memperoleh gelar S1. 
+								</p>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app1/2.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app1/3.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						
+						<li class="splide__slide">
+							<div class=".splide__slide__container">
+								<img src="Public/img/portofolio/app2/1.png" width="100%" />
+							</div>
+							<div class="app-desc">
+								<h3>Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+								<p>
+									Merupakan aplikasi penunjang tugas akhir yang dibuat menggunakan Metode JST-Backpropagation dan library Tensorflow.js, sebagai salah satu syarat dalam memperoleh gelar S1. 
+								</p>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app2/2.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app2/3.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+
+						<li class="splide__slide">
+							<div class=".splide__slide__container">
+								<img src="Public/img/portofolio/app3/1.png" width="100%" />
+							</div>
+							<div class="app-desc">
+								<h3>Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+								<p>
+									Merupakan aplikasi penunjang tugas akhir yang dibuat menggunakan Metode JST-Backpropagation dan library Tensorflow.js, sebagai salah satu syarat dalam memperoleh gelar S1. 
+								</p>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app3/2.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app3/3.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+
+						<li class="splide__slide">
+							<div class=".splide__slide__container">
+								<img src="Public/img/portofolio/app4/1.png" width="100%" />
+							</div>
+							<div class="app-desc">
+								<h3>Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+								<p>
+									Merupakan aplikasi penunjang tugas akhir yang dibuat menggunakan Metode JST-Backpropagation dan library Tensorflow.js, sebagai salah satu syarat dalam memperoleh gelar S1. 
+								</p>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app4/2.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app4/3.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+
+						<li class="splide__slide">
+							<div class=".splide__slide__container">
+								<img src="Public/img/portofolio/app5/1.png" width="100%" />
+							</div>
+							<div class="app-desc">
+								<h3>Pemetaan & Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+								<p>
+									Merupakan aplikasi penunjang tugas akhir yang dibuat menggunakan Metode JST-Backpropagation dan library Tensorflow.js, sebagai salah satu syarat dalam memperoleh gelar S1. 
+								</p>
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app5/2.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app5/3.png" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+					</ul>
+				</div>
+			  </div>
+		</div>
+	</div>
+</body>
+<script>
+	new Splide( '.splide',{
+		cover: true,
+		perPage: 1,
+		rewind : true,
+		gap:'1em',
+		pagination: true,
+		lazyLoad:'nearby',
+		width:'90%',
+	}).mount();
+
+	new Splide( '.vsplide', {
+		direction: 'ttb',
+		height:'370px',
+		width:'450px',
+		pagination: false,
+		rewind : true,
+		breakpoints: {
+			600: {
+				perPage: 1,
+			}
+		},
+	} ).mount();
+
+</script>
+</html>

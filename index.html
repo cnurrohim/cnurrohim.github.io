@@ -1,1 +1,376 @@
-Hello World, TEST
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github Pages</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="Assets/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="Assets/splide-2.4.21/dist/css/splide.min.css">
+	<script src="Assets/splide-2.4.21/dist/js/splide.min.js"></script>
+</head>
+<style>
+	@font-face {
+	  font-family: 'OpenSans-Regular';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Regular.ttf')  format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-Bold';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Bold.ttf')  format('truetype');
+	  font-weight: bolder;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-SemiBold';
+	  src: url('Assets/fonts/Open Sans/OpenSans-SemiBold.ttf')  format('truetype');
+	  font-weight: bold;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-Italic';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Italic.ttf')  format('truetype');
+	  font-weight:lighter;
+	  font-style: italic;
+	}
+
+	@font-face {
+	  font-family: 'OpenSans-Light';
+	  src: url('Assets/fonts/Open Sans/OpenSans-Light.ttf')  format('truetype');
+	  font-weight:lighter;
+	  font-style: normal;
+	}
+
+
+	@font-face {
+	  font-family: 'Roboto-Regular';
+	  src: url('Assets/fonts/Roboto/Roboto-Regular.ttf')  format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+
+	@font-face {
+	  font-family: 'Roboto-Bold';
+	  src: url('Assets/fonts/Roboto/Roboto-Bold.ttf')  format('truetype');
+	  font-weight: bold;
+	  font-style: normal;
+	}
+
+	@font-face {
+	  font-family: 'Roboto-Italic';
+	  src: url('Assets/fonts/Roboto/Roboto-Italic.ttf')  format('truetype');
+	  font-weight:normal;
+	  font-style: italic;
+	}
+
+	@font-face {
+	  font-family: 'Roboto-Light';
+	  src: url('Assets/fonts/Roboto/Roboto-Light.ttf')  format('truetype');
+	  font-weight:lighter;
+	  font-style: normal;
+	}
+	*, *:before, *:after {
+	  box-sizing: border-box;
+	}
+	html, body{
+		margin: 0;
+		padding: 0;
+		background: #ECE9E6;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+	}
+	
+	.container{
+		margin:90px auto;
+		width: 70%;
+		/*
+		 box-shadow:
+		  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		  0 12.5px 10px rgba(0, 0, 0, 0.06),
+		  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+		  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		  0 100px 80px rgba(0, 0, 0, 0.12)*/
+	}
+	.profile{
+		width: 100%;
+		position: relative;
+		height: 500px;
+		overflow: hidden;
+		padding:0;
+	}
+	.profile .img{
+		background-image: url('Public/img/profile-wide.jpeg');
+		background-repeat: no-repeat;
+  		background-attachment: fixed;
+  		background-size: cover;
+  		background-color: red;
+  		background-position: center -70px;
+  		background-attachment: unset;
+		width:100%;
+		height: 600px;
+		display: block;	
+		border-radius: 10px 10px 0 100%;
+		margin:0;
+	}
+	.name-card{
+		
+		position: absolute;
+    	bottom: 45px;
+    	justify-content: all;
+    	border:0px solid red;
+	}
+	.name-card .name{
+		font-family: OpenSans-SemiBold;
+		font-size: 54px;
+		margin-left: -5px !important;
+	}
+	.name-card .profesion, .name-card .contacts{
+		font-family: Roboto-light;
+		font-size: 18px;
+		display: inline;
+
+	}
+
+	.name-card .name,.name-card .profesion,
+	 .name-card .contacts{
+		background-color: white;
+		margin:10px auto;
+		padding-right: 30px;
+		color: #4e4949;
+	}
+	.portofolio{
+		color: #4e4949;
+		margin-top:50px;
+		font-size: 18px;
+		font-family: OpenSans-Bold;
+	}
+	.app-desc{
+
+		margin-top: 50px;
+	}
+	.app-desc h1{
+		font-family: OpenSans-Regular;
+	}
+	.app-desc p{
+		font-family: Roboto-Light;
+	}
+
+	hr.right{
+		border: 0;
+	    height: 1px;
+	    background: #333;
+	    background-image: linear-gradient(to right, #b7b7b7, #e2e2e2, #fff);
+	}
+
+	hr.center{
+		margin-bottom:50px;
+		border: 0;
+	    height: 1px;
+	    background: #333;
+	    background-image: linear-gradient(to right, #e2e2e2, #b7b7b7, #e2e2e2);
+	}
+	.splide{
+		margin-bottom: 50px;
+	}
+	a.link{
+		font-size: 14px;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="profile">
+			<div class="img" ></div>
+			<div class="name-card">
+				<div class="name">CHOIRUL NURROHIM</div>
+				<div class="profesion">
+					Web Programmer
+				</div>
+				<div class="contacts">
+					mcnurrohim@gmail.com
+					<a class="fab fa-github" href="https://github.com/cnurrohim"></a>
+					<a class="fab fa-instagram-square" href=""></a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="portofolio">
+			<h1>Portofolio</h1>
+			<hr class="right"/>
+			<div class="app-desc">
+				<h3>Pemetaan dan Prediksi Tingkat Kesehatan Masyarakat di Wilayah Jawa Timur</h3>
+				<p>Aplikasi penunjang tugas akhir menggunakan jaringan saraf tiruan atau neural network yang dibuat memanfaatkan library tensorflow.js. Aplikasi ditulis menggunakan bahasa javascript</p>
+				<a class="link" href="https://cnurrohim.github.io/jstbptensorflow/">https://cnurrohim.github.io/jstbptensorflow/</a>
+			</div>
+			<div id="splide" class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app6/1.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app6/2.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app6/3.png" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<hr class="center"/>
+
+			<div class="app-desc">
+				<h3>Aplikasi gudang dan produksi</h3>
+				<p>PT. LIMANJAYA TEKSTIL, Pasuruan
+				   Sebagai Back End Programmer
+				   Menggunakan: PHP/Codeigniter, Bootstrap
+				</p>
+			</div>
+
+			<div id="splide1" class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app1/1.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app1/2.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app1/3.png" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="center"/>
+
+			<div class="app-desc">
+				<h3>Aplikasi reservasi hotel & pelaporan pajak hotel kota pasuruan</h3>
+				<p>DINAS PENDATAPATAN KOTA PASURUAN
+				   Menggunakan: PHP/Codeigniter
+				</p>
+			</div>
+			<div id="splide2" class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app2/1.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app2/2.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app2/3.png" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="center"/>
+
+			<div class="app-desc">
+				<h3>Aplikasi management client/member asuransi AXA</h3>
+				<p>PT. AXIAPRO INVESTASI INTERNATIONAL
+				Sebagai Front End & Back End Programmer
+				Menggunakan: PHP/Laravel 5, CSS, Less, Bootstrap</p>
+			</div>
+
+			<div id="splide3" class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app3/1.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app3/2.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app3/3.png" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="center"/>
+
+			<div class="app-desc">
+				<h3>Toko Online Axiamarket</h3>
+				<p>PT. AXIAPRO INVESTASI INTERNATIONAL
+					Sebagai Front End Programmer
+					Menggunakan: CSS, Less, Bootstrap
+				</p>
+			</div>
+
+			<div id="splide4" class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app4/1.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app4/2.png" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<hr class="center"/>
+
+			<div class="app-desc">
+				<h3>Sistem Informasi Akademik Universitas</h3>
+				<p>PT. SENTRA VIDYA UTAMA
+					Sebagai Back End Programmer
+					Menggunakan PHP, Bootstrap
+				</p>
+			</div>
+
+			<div id="splide5" class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app5/1.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app5/2.png" width="100%" />
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/portofolio/app5/3.png" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+
+</body>
+<script type="text/javascript">
+	const splideProperty = {
+		cover: true,
+		perPage: 1,
+		rewind : true,
+		gap:'1em',
+		pagination: true,
+		lazyLoad:'nearby',
+		width:'100%',
+		height:'320px'
+	};
+
+	var splide = new Splide( '#splide',splideProperty).mount();
+	var splide2 = new Splide( '#splide1',splideProperty).mount();
+	var splide2 = new Splide( '#splide2',splideProperty).mount();
+	var splide2 = new Splide( '#splide3',splideProperty).mount();
+	var splide2 = new Splide( '#splide4',splideProperty).mount();
+	var splide2 = new Splide( '#splide5',splideProperty).mount();
+</script>
+</html>

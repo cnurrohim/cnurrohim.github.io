@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github Pages</title>
+	<link rel="stylesheet" href="Assets/splide-2.4.21/dist/css/splide.min.css">
+	<script src="Assets/splide-2.4.21/dist/js/splide.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+	html, body{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		background-color: #eee;
+		min-height: 100vh;
+	}
+	.left-pane,.right-pane{
+		border: 0px solid #000;
+		width: 49.7%;
+		height: 99vh;
+		display: inline-block;
+	}
+	.left-pane{
+		position: relative;
+	}
+	.right-pane{
+		vertical-align: top;
+	}
+	.profile-pic{
+		width: 25%;
+		height: 80%;
+		border:0px solid #000;
+		position: absolute;
+		right: 10%;
+		bottom: 10%;
+		overflow: hidden;
+		background-color: #999;
+	}
+	.splide{
+		margin-top: 16%;
+	}
+	.splide__arrows{
+		
+	}
+	.splide__arrow{
+		top:-40px !important;
+		background-color: unset !important;
+	}
+	.splide__arrow--next{
+		left: 10em;
+		right: unset !important;
+	}
+	.splide__pagination{
+		bottom: unset !important;
+		border:0px solid #000;
+		width: auto;
+		top:-50px;
+		left: 5.5em;
+	}
+	.splide__pagination__page{
+		background: #313131 !important;
+	}
+	.profile-pic img{
+		width: 200px;
+		height: 100%;
+		object-fit: contain;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="left-pane">
+			<div class="profile-pic">
+				<img src="Public/img/pp.jpg" alt="my photo">
+			</div>
+		</div>
+		<div class="right-pane">
+			<div class="splide">
+
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="Public/img/1.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/2.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/3.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/1.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/2.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/3.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/1.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/2.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/3.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/1.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/2.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+						<li class="splide__slide">
+							<img src="Public/img/3.jpg" width="100%" />
+							<h4></h4>
+							<div>
+								
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	new Splide( '.splide',{
+		cover: true,
+		'heightRatio': 0.5,
+		perPage: 2,
+		rewind : true,
+		breakpoints: {
+			600: {
+				perPage: 1,
+			}
+		},
+		gap:'2em',
+		pagination: true,
+		lazyLoad:'nearby',
+		height:'25%',
+	}).mount();
+</script>
+</html>
